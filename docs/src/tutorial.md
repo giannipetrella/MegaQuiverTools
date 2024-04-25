@@ -144,7 +144,7 @@ Dict{Vector{Vector{Int64}}, Int64} with 7 entries:
 
 ### Use cases
 
-The following are examples of use cases for MegaQuiverTools.jl
+The following are examples of use cases for MegaQuiverTools
 
 **Verify Teleman inequalities**
 
