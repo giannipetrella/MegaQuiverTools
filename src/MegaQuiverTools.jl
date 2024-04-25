@@ -3,7 +3,6 @@ module MegaQuiverTools
 import Base.show
 
 export Quiver
-# are these useful?
 export nvertices, narrows, indegree, outdegree, isacyclic, isconnected, issink, issource
 export Eulerform, canonical_stability, iscoprime, slope
 export isSchurroot
@@ -18,10 +17,9 @@ using Memoize, LinearAlgebra
 
 """
 A quiver is represented by its adjacency
-``n \\times n`` matrix ``adjacency = (a_{ij}),
-``
+``n \\times n`` matrix ``adjacency = (a_{ij})``,
 where ``n`` is the number of vertices
-and ``a_{ij}`` is the number of arrows i → j.
+and ``a_{ij}`` is the number of arrows ``i \\to j``.
 
 Attributes:
 
@@ -49,18 +47,13 @@ mutable struct Quiver
 end
 
 function show(io::IO, Q::Quiver)
-    print(io, Q.name*", with adjacency matrix ")
+    if Q.name == ""
+        print(io, "Quiver with adjacency matrix ")
+    else
+        print(io, Q.name*", with adjacency matrix ")
+    end
     println(io, Q.adjacency)
 end
-
-# """
-# Returns the adjacency matrix of the quiver.
-
-# OUTPUT: A square matrix M whose entry M[i,j] is the number of arrows from the vertex i to the vertex j.
-# """
-# function adjacency_matrix(Q::Quiver)
-#     return Q.adjacency
-# end
 
 """
 Returns the (necessarily symmetric) adjacency matrix of the underlying graph of the quiver.
@@ -84,7 +77,6 @@ Checks wether the quiver is acyclic, i.e. has no oriented cycles.
 """
 isacyclic(Q::Quiver) = all(entry == 0 for entry in Q.adjacency^nvertices(Q))
 
-# TODO probably not needed
 """
 Checks wether the underlying graph of the quiver is connected.
 
@@ -241,7 +233,7 @@ The canonical stability parameter for the couple ``(Q,d)`` is given by ``<d,- > 
 """
 canonical_stability(Q::Quiver, d::Vector{Int})::Vector{Int} = -(-transpose(euler_matrix(Q)) + euler_matrix(Q))*d
 
-"""Checks wether the given dimension vector ``d`` is `theta`-coprime for the stability parameter `theta`."""
+"""Checks wether the given dimension vector ``d`` is ``theta``-coprime for the stability parameter ``theta``."""
 function iscoprime(d::Vector{Int}, theta::Vector{Int})
     return all(e -> theta'*e != 0, all_proper_subdimension_vectors(d))
 end
@@ -306,8 +298,6 @@ false
     end
 end
 
-# TODO write examples with properly semistable representations and with sst nonempty and st empty.
-# TODO put these in unit tests
 """Checks if Q has a theta-stable representation of dimension vector d."""
 @memoize Dict function hasstables(Q::Quiver, d::Vector{Int}, theta::Vector{Int}; slope_denominator::Function = sum)
     if all(di == 0 for di in d)
@@ -542,7 +532,5 @@ end
 @memoize Dict function all_proper_subdimension_vectors(d::Vector{Int})::Vector{Vector{Int}}
     return filter(e -> any(ei != 0 for ei in e) && e != d, all_subdimension_vectors(d))
 end
-
-include("EN-weights.jl")
 
 end

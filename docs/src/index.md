@@ -7,26 +7,15 @@
 
 ## Introduction
 
-MegaQuiverTools is a beta version of QuiverTools,
+MegaQuiverTools is a showcase version of QuiverTools,
 a software suite in development for treatment of quiver representations,
 their roots, their moduli spaces and computations of several invariants of these.
 
-Examples of the functionalities of MegaQuiverTools will be:
-
-- Treatment of Schur roots, canonical decomposition of dimension vectors;
-- Computation of the Harder-Narasimhan stratification of the parameter space of quiver moduli;
-    - Computation of weights of various vector bundles relative to the 1-parameter subgroups associated to each stratum;
-    - Verification of Teleman quantization criteria;
-- Construction of the Chow ring of a given quiver moduli, computation of Euler characteristics;
-- Computation of the Hodge diamond of quiver moduli;
-- etc.
+QuiverTools will offer many functionalities for the treatment of quiver moduli,
+however this showcase version is only meant to demonstrate some of them,
+with one example in mind.
 
 QuiverTools will be available as a Julia package and as a Sage library.
-
-Features present in this beta version are
-
- - Treatment of Harder-Narasimhan stratifications, weight computations;
- - Chow rings and Euler characteristic computations.
 
 ## Installation
 
@@ -37,7 +26,7 @@ pkg>add https://github.com/Catullo99/MegaQuiverTools.git
 ```
 
 
-## Aknowledgements
+## Acknowledgements
 
 QuiverTools is being developed by [P. Belmans](https://pbelmans.ncag.info/), H. Franzen and [G. Petrella](https://www.giannipetrella.eu).
 
