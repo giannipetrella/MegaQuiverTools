@@ -134,7 +134,7 @@ julia> isamplystable(Q, d, θ)
 true
 ```
 
-The method `isampystable()` determines whether the codimension of the θ-semistable locus,
+The method `isamplystable()` determines whether the codimension of the θ-semistable locus,
 ``\mathrm{R}^{\theta-sst}(Q,\mathbf{d})\subset\mathrm{R}(Q,\mathbf{d})``, is at least 2.
 
 The method `allHNtypes()` provides a list of all the Harder-Narasimhan types that appear in the problem.
