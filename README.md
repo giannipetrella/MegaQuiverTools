@@ -1,7 +1,7 @@
 # MegaQuiverTools
 
-[![tests](https://github.com/Catullo99/MegaQuiverTools.jl/actions/workflows/Runtests.yml/badge.svg)](https://github.com/Catullo99/MegaQuiverTools.jl/actions/workflows/Runtests.yml)
-[![docs](https://github.com/Catullo99/MegaQuiverTools.jl/actions/workflows/Documenter.yml/badge.svg)](https://github.com/Catullo99/MegaQuiverTools.jl/actions/workflows/Documenter.yml)
+[![tests](https://github.com/giannipetrella/MegaQuiverTools.jl/actions/workflows/Runtests.yml/badge.svg)](https://github.com/giannipetrella/MegaQuiverTools.jl/actions/workflows/Runtests.yml)
+[![docs](https://github.com/giannipetrella/MegaQuiverTools.jl/actions/workflows/Documenter.yml/badge.svg)](https://github.com/giannipetrella/MegaQuiverTools.jl/actions/workflows/Documenter.yml)
 
 This is a preliminary version of QuiverTools.
 
@@ -10,7 +10,7 @@ This is a preliminary version of QuiverTools.
 Once a functioning version of Julia is installed on the machine, the following command can be used to install the package:
 
 ```julia-repl
-pkg>add https://github.com/Catullo99/MegaQuiverTools.git
+pkg>add https://github.com/giannipetrella/MegaQuiverTools.git
 ```
 
 One can alternatively clone the repository and install the package from the local copy:
@@ -23,7 +23,7 @@ This _should_ add the package to the Julia environment and let Julia understand 
 
 ## Documentation
 
-The documentation is hosted on GitHub Pages. It can be found [here](https://catullo99.github.io/MegaQuiverTools/dev).
+The documentation is hosted on GitHub Pages. It can be found [here](https://giannipetrella.github.io/MegaQuiverTools/dev).
 
 To build a local .pdf version of the documentation, first modify the make.jl file by replacing the parameter ``format = Documenter.HTML()`` with ``format = Documenter.LaTeX()``, then run
 

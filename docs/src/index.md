@@ -22,7 +22,7 @@ QuiverTools will be available as a Julia package and as a Sage library.
 At the moment the package is not registered, so you can install it by running the following command in the Julia REPL:
 
 ```julia-repl
-pkg>add https://github.com/Catullo99/MegaQuiverTools.git
+pkg>add https://github.com/giannipetrella/MegaQuiverTools.git
 ```
 
 
